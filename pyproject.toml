@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "finapi_web_form_and_finapi_access"
+version = "1.0.0"
+description = "finAPI Web Form 2.0 & finAPI Access V2"
+authors = ["OpenAPI Generator Community <team@openapitools.org>"]
+license = "NoLicense"
+readme = "README.md"
+repository = "https://github.com//"
+keywords = ["OpenAPI", "OpenAPI-Generator", "finAPI Web Form 2.0", "finAPI Access V2"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+urllib3 = ">= 1.25.3"
+python-dateutil = ">=2.8.2"
+pydantic = ">=2"
+typing-extensions = ">=4.7.1"
+
+[tool.poetry.dev-dependencies]
+types-python-dateutil = ">=2.8.19.14"
+mypy = "1.4.1"
+
+
+[tool.mypy]
+files = [
+  "src/finapi_web_form",
+  "src/finapi_access",
+]
+
+# strict = true
+
+## Getting these passing should be easy
+strict_equality = true
+strict_concatenate = true
+
+## Strongly recommend enabling this one as soon as you can
+check_untyped_defs = true
+
+## These shouldn't be too much additional work, but may be tricky to
+## get passing if you use a lot of untyped libraries
+disallow_subclassing_any = true
+disallow_untyped_decorators = true
+disallow_any_generics = true
+
+### These next few are various gradations of forcing use of type annotations
+#disallow_untyped_calls = true
+#disallow_incomplete_defs = true
+#disallow_untyped_defs = true
+#
+### This one isn't too hard to get passing, but return on investment is lower
+#no_implicit_reexport = true
+#
+### This one can be tricky to get passing if you use a lot of untyped libraries
+#warn_return_any = true
