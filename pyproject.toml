@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "finapi_web_form_and_finapi_access"
+name = "finapi-webform-and-access"
 version = "1.0.0"
 description = "finAPI Web Form 2.0 & finAPI Access V2"
 authors = ["OpenAPI Generator Community <team@openapitools.org>"]
